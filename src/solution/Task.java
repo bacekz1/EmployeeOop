@@ -4,6 +4,8 @@ public class Task {
     private String name;
     private double workingHours;
 
+    private Employee employee;
+
     public Task(String name, double workingHours) {
         setName(name);
         setWorkingHours(workingHours);
@@ -18,6 +20,19 @@ public class Task {
             System.out.println("Name cannot be empty");
         } else {
             this.name = name;
+        }
+    }
+
+     Employee getEmployee() {
+        return employee;
+    }
+
+     void setEmployee(Employee employee) {
+        if (this.employee == null) {
+            this.employee = employee;
+        }
+        else {
+            System.out.println(getName() + " already have employee");
         }
     }
 
